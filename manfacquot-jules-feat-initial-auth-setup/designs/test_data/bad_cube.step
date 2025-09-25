@@ -1,0 +1,10 @@
+This is not a valid STEP file.
+It is missing the correct structure and keywords.
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION_WRONG_KEYWORD(('A bad STEP file'),'1');
+ENDSEC;
+DATA;
+#10 = SOME_BOGUS_ENTITY(1,2,3);
+ENDSEC;
+END-ISO-10303-21;

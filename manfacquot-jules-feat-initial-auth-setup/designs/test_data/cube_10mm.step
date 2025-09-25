@@ -1,0 +1,21 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('Minimal STEP File Example'),'1');
+FILE_NAME('cube_10mm.step','2023-10-27T12:00:00',('Author Name'),('Org Name'),'','','');
+FILE_SCHEMA(('AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }'));
+ENDSEC;
+DATA;
+#10 = MECHANICAL_DESIGN_GEOMETRIC_PRESENTATION_REPRESENTATION('',(#20),#30);
+#20 = (GEOMETRIC_REPRESENTATION_ITEM()PRODUCT_DEFINITION_SHAPE()REPRESENTATION_ITEM('')SHAPE_REPRESENTATION('',(#40)));
+#30 = REPRESENTATION_CONTEXT('','');
+#40 = AXIS2_PLACEMENT_3D('',#50,#60,#70);
+#50 = CARTESIAN_POINT('',(0.0,0.0,0.0));
+#60 = DIRECTION('',(0.0,0.0,1.0));
+#70 = DIRECTION('',(1.0,0.0,0.0));
+/* Add more entities for a simple shape if needed for steputils to be happy */
+/* This is likely too minimal to be a fully valid geometric cube for most parsers */
+/* but might pass basic structural checks for steputils. */
+/* For robust testing, a known-good simple cube STEP file from a CAD system is better. */
+/* For now, this is a placeholder for basic parsing attempt. */
+ENDSEC;
+END-ISO-10303-21;
